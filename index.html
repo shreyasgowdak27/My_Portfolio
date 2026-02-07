@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shreyas Gowda K — Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">Shreyas Gowda K</a>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container" id="home">
+        <div class="hero-left">
+          <h1>Hello, I'm Shreyas Gowda K</h1>
+          <p class="lead">Aspiring Data & Business Analyst | Backend Learner using Java, Python and MySql  
+          </p>
+          <p> I'm passionate about building efficient systems and analyzing data to drive insights. I also enjoy working with databases and building scalable backend applications.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="photo-card">
+            <img src="assets/profile..jpeg" alt="Shreyas Gowda K — profile photo">
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="container about">
+        <h2>About Me</h2>
+        <p>Backend developer with an analytical mindset aspiring to become a Data & Business Analyst. I love working with SQL to manipulate, clean, and analyze datasets to uncover market trends and operational inefficiencies. My background allows me to understand the end-to-end data lifecycle, from storage to insights, ensuring that analytics deliver tangible business value.</p>
+        <p style="color:var(--muted);font-size:14px">Location: Mysore, Karnataka</p>
+      </section>
+
+      <section id="skills" class="container skills">
+        <h2>Skills</h2>
+        <div class="skill-grid">
+          <a href="https://github.com/shreyasgowdak27/Java_programs.git" target="_blank" rel="noopener" class="skill skill-link" title="View Java Programs">
+            <div class="skill-header"><strong>Java (OOP)</strong></div>
+          </a>
+          <div class="skill">
+            <div class="skill-header"><strong>C</strong></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><strong>Python</strong></div>
+          </div>
+          <a href="https://github.com/shreyasgowdak27/mySQL.git" target="_blank" rel="noopener" class="skill skill-link" title="View MySQL Repository">
+            <div class="skill-header"><strong>MySQL</strong></div>
+          </a>
+          <div class="skill">
+            <div class="skill-header"><strong>Data Analytics</strong></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><strong>Backend Development</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="container projects">
+        <h2>Projects</h2>
+        <div class="project-tools">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="java">Java</button>
+          <button data-filter="sql">SQL</button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-tags="java">
+            <h3>Bank Simulation (Java)</h3>
+            <p>Mini project simulating bank operations using OOP in Java. (GitHub)</p>
+              <div class="project-actions">
+                <a href="https://github.com/shreyasgowdak27/Bank_Simulation_System-using-Java.git" class="link" target="_blank" rel="noopener"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+          </article>
+
+          <article class="project-card" data-tags="sql">
+            <h3>SQL Practice Repository</h3>
+            <p>Collection of queries and exercises stored on GitHub.</p>
+            <div class="project-actions">
+              <a href="https://github.com/shreyasgowdak27/mySQL.git" class="link" target="_blank" rel="noopener"><i class="fab fa-github"></i> View on GitHub</a>
+            </div>
+          </article>
+
+
+        </div>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h2>Contact</h2>
+        <p>I'm open to internships and junior roles in data analytics or backend development. Replace the contact form endpoint or use the mailto link below.</p>
+        <div class="contact-grid">
+          <form class="contact-form" action="mailto:gshreyas151@gmail.com" method="post" enctype="text/plain">
+            <label>Name<input type="text" name="name" required></label>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Message<textarea name="message" rows="4" required></textarea></label>
+            <button type="submit" class="btn">Send</button>
+          </form>
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Location: Mysore, Karnataka</p>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:gshreyas151@gmail.com" target="_blank" rel="noopener">gshreyas151@gmail.com</a></p>
+            <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/shreyasgowdak27" target="_blank" rel="noopener">shreyasgowdak27</a></p>
+            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/shreyas-gowda-k-61b649320" target="_blank" rel="noopener">Shreyas Gowda K</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Shreyas Gowda K — Built with care for professional roles</small>
+      </div>
+    </footer>
+
+    <div id="java-modal" class="modal" style="display:none">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>Java OOP Repositories</h3>
+        <ul>
+          <li><a href="https://github.com/shreyasgowdak27/Java_programs.git" target="_blank" rel="noopener"><i class="fab fa-github"></i> Java Programs</a></li>
+          <li><a href="https://github.com/shreyasgowdak27/day4.git" target="_blank" rel="noopener"><i class="fab fa-github"></i> Day 4 Programs</a></li>
+          <li><a href="https://github.com/shreyasgowdak27/Day5programs.git" target="_blank" rel="noopener"><i class="fab fa-github"></i> Day 5 Programs</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="mysql-modal" class="modal" style="display:none">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>MySQL Repository</h3>
+        <ul>
+          <li><a href="https://github.com/shreyasgowdak27/mySQL.git" target="_blank" rel="noopener"><i class="fab fa-github"></i> MySQL Queries</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
