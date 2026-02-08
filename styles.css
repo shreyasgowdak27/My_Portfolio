@@ -91,40 +91,34 @@ a:focus,button:focus,input:focus,textarea:focus{outline:2px solid rgba(11,132,25
 /* form input hover and focus */
 .contact-form input:hover,.contact-form textarea:hover{border-color:var(--accent);background:rgba(11,132,255,0.02);transition:all 0.3s ease}
 .contact-form input:focus,.contact-form textarea:focus{border-color:var(--accent);background:rgba(11,132,255,0.04);box-shadow:0 0 0 3px rgba(11,132,255,0.08)}
-/* Impressive Oval Profile Styling */
+/* The Final "Perfect Fit" Oval Styling */
 .profile-pic {
-    width: 260px;               /* Width of the oval */
-    height: 320px;              /* Height (taller than width makes it oval) */
-    object-fit: cover;          /* Keeps your face from looking stretched */
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    display: block;             /* Kills the invisible gap at the bottom */
+    margin: 20px auto;
     
     /* 1. Creating the Oval Shape */
-    border-radius: 50% / 60%;   /* Professional oval ratio */
+    border-radius: 50% / 60%;
     
-    /* 2. The Heavy Duty Border */
-    /* This creates a 8px thick white border directly on the image */
-    border: 8px solid #ffffff; 
-    
-    /* 3. The Bold Outer Outline */
-    /* This adds a thick, impressive colorful ring around the border */
-    outline: 5px solid #007bff; /* Increase the 5px to make it even bigger */
-    outline-offset: -2px;       /* This tucks the outline tight against the border */
-    
-    /* 4. Professional Shadow */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    
-    display: block;
-    margin: 20px auto;
+    /* 2. The Double-Border Trick (Zero Gaps) */
+    /* We use box-shadow instead of outline because it wraps ovals better */
+    border: 8px solid #ffffff;           /* Inner White Ring */
+    box-shadow: 0 0 0 6px #007bff,       /* This "Spread Shadow" creates a perfect blue ring */
+                0 15px 35px rgba(0,0,0,0.3); /* This adds the depth/shadow */
 }
 
-/* This part kills the white rectangle for good */
+/* Kills the white background and all spacing gaps */
 .photo-card {
     background: transparent !important;
     padding: 0 !important;
-    box-shadow: none !important;
+    line-height: 0 !important;           /* Forces image and container to merge */
     border: none !important;
+    box-shadow: none !important;
 }
 
-/* This ensures the oval shape isn't overwritten by the old 8px rule */
+/* Safety rule to ensure the shape stays oval */
 .photo-card img {
     border-radius: 50% / 60% !important;
 }
