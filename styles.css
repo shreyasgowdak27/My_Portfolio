@@ -91,35 +91,36 @@ a:focus,button:focus,input:focus,textarea:focus{outline:2px solid rgba(11,132,25
 /* form input hover and focus */
 .contact-form input:hover,.contact-form textarea:hover{border-color:var(--accent);background:rgba(11,132,255,0.02);transition:all 0.3s ease}
 .contact-form input:focus,.contact-form textarea:focus{border-color:var(--accent);background:rgba(11,132,255,0.04);box-shadow:0 0 0 3px rgba(11,132,255,0.08)}
-/* The Final Match: Targeting .profile-circle */
+/* 1. Kill the white rectangle box */
+.photo-card {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 30px !important; /* Gives room so the blue ring isn't cut off */
+    display: flex !important;
+    justify-content: center !important;
+    overflow: visible !important;
+}
+
+/* 2. The Perfect Oval + Blue Ring */
 .profile-circle {
     width: 260px !important;
     height: 320px !important;
     object-fit: cover !important;
-    display: block !important;
-    margin: 20px auto !important;
     border-radius: 50% / 60% !important;
+    display: block !important;
+    margin: 0 auto !important;
     
-    /* REMOVE the standard border to stop the gap */
-    border: none !important;
+    /* Removing the border property entirely to stop the gap */
+    border: none !important; 
 
-    /* USE multiple shadows to create the rings */
-    /* Layer 1: 8px White Ring | Layer 2: 14px Blue Ring (8 white + 6 blue) | Layer 3: The Shadow */
+    /* Drawing the rings with box-shadow for mathematical perfection */
+    /* 8px White + 6px Blue (total 14px) + Shadow */
     box-shadow: 
         0 0 0 8px #ffffff, 
         0 0 0 14px #007bff, 
         0 15px 35px rgba(0,0,0,0.3) !important;
-    
-    /* Ensure the rings have space to breathe */
-    transform: scale(0.95); 
 }
-
-.photo-card {
-    background: transparent !important;
-    padding: 20px !important; /* Extra space so the rings don't hit the edge */
-    overflow: visible !important;
-    border: none !important;
-}
-
 
 
