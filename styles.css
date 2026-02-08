@@ -98,27 +98,28 @@ a:focus,button:focus,input:focus,textarea:focus{outline:2px solid rgba(11,132,25
     object-fit: cover !important;
     display: block !important;
     margin: 20px auto !important;
-    
-    /* 1. The Oval Shape */
     border-radius: 50% / 60% !important;
     
-    /* 2. The White Border + Blue Ring */
-    /* Using box-shadow ensures the blue ring 'hugs' the oval perfectly */
-    border: 8px solid #ffffff !important;
-    box-shadow: 0 0 0 6px #007bff, 0 15px 35px rgba(0,0,0,0.3) !important;
+    /* REMOVE the standard border to stop the gap */
+    border: none !important;
+
+    /* USE multiple shadows to create the rings */
+    /* Layer 1: 8px White Ring | Layer 2: 14px Blue Ring (8 white + 6 blue) | Layer 3: The Shadow */
+    box-shadow: 
+        0 0 0 8px #ffffff, 
+        0 0 0 14px #007bff, 
+        0 15px 35px rgba(0,0,0,0.3) !important;
     
-    /* 3. Safety settings */
-    position: relative;
-    z-index: 5;
+    /* Ensure the rings have space to breathe */
+    transform: scale(0.95); 
 }
 
-/* Ensure the container doesn't cut off the blue ring */
 .photo-card {
     background: transparent !important;
-    padding: 10px !important; /* Added a little padding so the blue ring isn't cut off */
+    padding: 20px !important; /* Extra space so the rings don't hit the edge */
+    overflow: visible !important;
     border: none !important;
-    box-shadow: none !important;
-    overflow: visible !important; /* Crucial: allows the blue ring to show */
 }
+
 
 
