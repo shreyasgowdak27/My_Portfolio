@@ -103,24 +103,29 @@ a:focus,button:focus,input:focus,textarea:focus{outline:2px solid rgba(11,132,25
     overflow: visible !important;
 }
 
-/* 2. The Perfect Oval + Blue Ring */
+/* FINAL STABLE OVAL STYLING */
 .profile-circle {
     width: 260px !important;
     height: 320px !important;
     object-fit: cover !important;
     border-radius: 50% / 60% !important;
     display: block !important;
-    margin: 0 auto !important;
+    margin: 20px auto !important;
+    border: none !important;
     
-    /* Removing the border property entirely to stop the gap */
-    border: none !important; 
-
-    /* Drawing the rings with box-shadow for mathematical perfection */
-    /* 8px White + 6px Blue (total 14px) + Shadow */
+    /* Perfect Zero-Gap Rings */
     box-shadow: 
         0 0 0 8px #ffffff, 
         0 0 0 14px #007bff, 
         0 15px 35px rgba(0,0,0,0.3) !important;
 }
 
-
+/* Kill the white box background */
+.photo-card {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 25px !important;
+    overflow: visible !important;
+}
